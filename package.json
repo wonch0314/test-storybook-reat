@@ -1,23 +1,22 @@
 {
   "name": "react-env",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "main": "dist/index.js",
+  "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "clean": "rimraf dist",
+    "babel": "babel src/components --out-dir dist --ignore '**/*.stories.js' --copy-files",
+    "compile": "npm run clean && npm run babel"
   },
   "eslintConfig": {
     "extends": [
@@ -50,9 +49,19 @@
     "@storybook/react": "^8.0.10",
     "@storybook/react-webpack5": "^8.0.10",
     "@storybook/test": "^8.0.10",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
     "storybook": "^8.0.10",
-    "webpack": "^5.91.0"
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.91.0",
+    "@babel/cli": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1"
   }
 }
