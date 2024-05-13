@@ -1,3 +1,6 @@
+registry=http://ec2-43-200-1-168.ap-northeast-2.compute.amazonaws.com:8081/repository/npm-private/
+email=wonch30@gmail.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
